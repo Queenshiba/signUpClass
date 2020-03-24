@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>signUpClass</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="basicInfo">
+            <h1>Infomation 1/2</h1>
+            <div class="inputName-container">
+                <p class="index">Name</p>
+                <input type="text" name="inputName" id="inputName" placeholder="type your name">
+            </div>
+            <div class="dob-container">
+                <p class="index">DOB</p>
+                <input type="date" name="inputDob" id="inputDob">
+            </div>
+
+            <div class="inputEmail-container">
+                <p class="index">Email Adress</p>
+                <input type="email" name="inputEmail" id="inputEmail" placeholder="type your Email adress">
+            </div>
+
+            <div class="basicInfo-btn">
+                <button onclick="SaveBasicInfo()" type="submit">Save</button>
+            </div>
+        </div>
+
+        <div class="selectDate-contaier">
+            <h1>Infomation 2/2</h1>
+            <div class="choseDate-container">
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Availability</th>
+                        <th>choose</th>
+                    </tr>
+
+                    <tr class="date">
+                        <th>3/8</th>
+                        <th>19:00</th>
+                        <th>5/9</th>
+                        <th><input type="checkbox" name="" id=""></th>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="note-container">
+                <p class="index">Note</p>
+                <input type="text" name="inputNote" id="inputNote" placeholder="any message?">
+            </div>
+            <input onclick="SaveSelectDateInfo()" type="submit" value="Save">
+        </div>
+
+        <div class="confirmInfo">
+            <h1>Confirmation</h1>
+            <p class="subTitles">Name</p>
+            <div id="confirmName"></div>
+            <p class="subTitles">BOD</p>
+            <div id="confirmDbo"></div>
+            <p class="subTitles">Email adress</p>
+            <div id="confirmEmail"></div>
+            <p class="subTitles">Date</p>
+            <div id="confirmDate"></div>
+            <p class="subTitles">Nate</p>
+            <div id="confirmNote"></div>
+            <input type="submit" value="Save">
+        </div>
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>
