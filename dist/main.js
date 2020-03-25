@@ -14,7 +14,7 @@ const confirmEmail = document.getElementById('confirmEmail')
 const confirmDate = document.getElementById('confirmDate')
 const confirmNote = document.getElementById('confirmNote')
 
-console.log(inputDob.date)
+
 
 function SaveBasicInfo() {
     // inputName to confirmation
@@ -23,16 +23,32 @@ function SaveBasicInfo() {
     createPTagForName.appendChild(createPTagForNameText)
     confirmName.appendChild(createPTagForName)
 
-        // input DOB confirmation
-        const createPTagForDob = document.createElement('p')
-        const createPTagForDobText = document.createTextNode(inputDob.value)
-       
-        createPTagForDob.appendChild(createPTagForDobText)
-        confirmDob.appendChild(createPTagForDob)
+    // input DOB confirmation
+    const createPTagForDob = document.createElement('p')
+    const dobNum = document.createTextNode(inputDob.value)
+    createPTagForDob.appendChild(dobNum)
+    confirmDob.appendChild(createPTagForDob)
 
-            // input Email adress to confirmation
+    // input Email adress to confirmation
     const createPTagForEmail = document.createElement('p')
-    const createPTagForEmailText = document.createTextNode(inputEmail.value)
-    createPTagForEmail.appendChild(createPTagForEmailText)
+    const emailText = document.createTextNode(inputEmail.value)
+    createPTagForEmail.appendChild(emailText)
     confirmEmail.appendChild(createPTagForEmail)
+
 }
+
+fetch("./schedule.json")
+    .then(function (resp) {
+        return resp.json();
+    })
+    .then(function (data) {
+        const classSchedule = data.classSchedule;
+
+        for (let i = 0; i < classSchedule.length; i++) {
+
+            const className = classSchedule[i].className
+            co    
+        }
+        
+
+    })
