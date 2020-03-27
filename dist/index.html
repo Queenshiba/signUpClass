@@ -31,30 +31,35 @@
             </div>
         </div>
 
-        <div class="selectDate-contaier">
+        <div class="selectEvent-contaier">
             <h1>Infomation 2/2</h1>
-            <div class="choseDate-container">
-                <table>
-                    <tr>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Availability</th>
-                        <th>choose</th>
-                    </tr>
+            <div class="chooseEvent-container" id="chooseEvent-container">
 
-                    <tr class="date">
-                        <th>3/8</th>
-                        <th>19:00</th>
-                        <th>5/9</th>
-                        <th><input type="checkbox" name="" id=""></th>
+                <!-- <div id="eventBox">
+                    <div class="eventBox-left">
+                        <div class="className-container" id="className-container">
+                            <p id="eventName">Name</p>
+                        </div>
+                        <div class="eventDetail" id="eventDetail">
+                            <div class="eventDate-container" id="eventDate-container">
+                                <p id="eventDate">3/10</p>
+                                <p>Date</p>
+                            </div>
+                            <div class="eventHour-container" id="eventHour-container">
+                                <p id="eventHour">10:00</p>
+                                <p>Hour</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eventBox-right" id="eventBox-right">
+                        <div class="openingNum">10</div>
+                        <div class="openingNumComment">Opening</div>
+                    </div>
+                </div> -->
 
-                    </tr>
-                </table>
+
             </div>
-            <div class="note-container">
-                <p class="index">Note</p>
-                <input type="text" name="inputNote" id="inputNote" placeholder="any message?">
-            </div>
+           
             <input onclick="SaveSelectDateInfo()" type="submit" value="Save">
         </div>
 
@@ -69,11 +74,10 @@
             <p class="subTitles">Email adress</p>
             <div id="confirmEmail"></div>
 
-            <p class="subTitles">Date</p>
-            <div id="confirmDate"></div>
+            <p class="subTitles">Selected Class</p>
+            <div id="confirmSelectedClass"></div>
 
-            <p class="subTitles">Note</p>
-            <div id="confirmNote"></div>
+
 
             <input type="submit" value="Save">
         </div>

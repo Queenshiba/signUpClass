@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* eventBox */
+.chooseEvent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#eventBox {
+    background: yellow;
+    display: flex;
+    width: 80vw;
+    height: 80px;
+    justify-content: center;
+    margin: 1%;
+    
+}
+
+#eventDetail {
+    display: flex;
+    flex-direction: row;
+}
+#eventBox-right {
+    background: yellowgreen;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#eventBox-left {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+#className-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+#eventDate-container {
+    background: pink;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#eventHour-container {
+    background: orange;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,9 +1,3 @@
-// const Datastore = require('nedb');
-
-// const database = new Datastore('database.db');
-// database.loadDatabase();
-// database.insert({name : "haru"})
-
 const inputName = document.getElementById('inputName')
 const inputDob = document.getElementById('inputDob')
 const inputEmail = document.getElementById('inputEmail')
@@ -11,8 +5,8 @@ const inputEmail = document.getElementById('inputEmail')
 const confirmName = document.getElementById('confirmName')
 const confirmDob = document.getElementById('confirmDob')
 const confirmEmail = document.getElementById('confirmEmail')
-const confirmDate = document.getElementById('confirmDate')
-const confirmNote = document.getElementById('confirmNote')
+const confirmSelectedClass = document.getElementById('confirmSelectedClass')
+
 
 
 
@@ -37,6 +31,7 @@ function SaveBasicInfo() {
 
 }
 
+
 fetch("./schedule.json")
     .then(function (resp) {
         return resp.json();
@@ -46,9 +41,124 @@ fetch("./schedule.json")
 
         for (let i = 0; i < classSchedule.length; i++) {
 
-            const className = classSchedule[i].className
-            co    
+            const className = classSchedule[i].className;
+            const classDate = classSchedule[i].date;
+            const classTime = classSchedule[i].time;
+            const classCapacity = classSchedule[i].capacity;
+
+            // append schedule data to divs
+            // eventBox contains eventBox-left,eventBox-right
+            const createDivForEventBox = document.createElement('div');
+            createDivForEventBox.setAttribute("id", "eventBox");
+
+            // append eventBox
+            const chooseEventContainer = document.getElementById('chooseEvent-container');
+            chooseEventContainer.appendChild(createDivForEventBox)
+
+
+            // EventBoxLeft contains className-container,eventDetail
+            const createDivForEventBoxLeft = document.createElement('div');
+            createDivForEventBoxLeft.setAttribute("id", "eventBox-left");
+            createDivForEventBox.appendChild(createDivForEventBoxLeft)
+
+            // EventNameContainer contains eventName
+            const createDivForEventNameContainer = document.createElement('div');
+            createDivForEventNameContainer.setAttribute("id", "className-container");
+            createDivForEventBoxLeft.appendChild(createDivForEventNameContainer)
+            // create p tag for EventName
+            const createPForEventName = document.createElement('p');
+            const EventNameText = document.createTextNode(className)
+            createPForEventName.appendChild(EventNameText)
+            createDivForEventNameContainer.appendChild(createPForEventName)
+
+            // EventDetail contains eventDate-container, eventHour-containe
+            const createDivForEventDetail = document.createElement('div');
+            createDivForEventDetail.setAttribute("id", "eventDetail");
+            createDivForEventBoxLeft.appendChild(createDivForEventDetail)
+
+            // EventDateContainer contains eventDate
+            const createDivForEventDateContainer = document.createElement('div');
+            createDivForEventDateContainer.setAttribute("id", "eventDate-container");
+            createDivForEventDetail.appendChild(createDivForEventDateContainer)
+            // create p tag for event date
+            const createPForEventDate = document.createElement('p');
+            const EventDateText = document.createTextNode(classDate)
+            createPForEventDate.appendChild(EventDateText)
+            createDivForEventDateContainer.appendChild(createPForEventDate)
+            // create p tag for discription "date"
+            const createPForEventDateDiscription = document.createElement('p');
+            const EventDateDiscriptionText = document.createTextNode("Date")
+            createPForEventDateDiscription.appendChild(EventDateDiscriptionText)
+            createDivForEventDateContainer.appendChild(createPForEventDateDiscription)
+
+            // EventHourContainer contains eventHour
+            const createDivForEventHourContainer = document.createElement('div');
+            createDivForEventHourContainer.setAttribute("id", "eventHour-container");
+            createDivForEventDetail.appendChild(createDivForEventHourContainer)
+            // create p tag for event time
+            const createPForEventTime = document.createElement('p');
+            const EventTimeText = document.createTextNode(classTime)
+            createPForEventTime.appendChild(EventTimeText)
+            createDivForEventHourContainer.appendChild(createPForEventTime)
+            // create p tag for discription "time"
+            const createPForEventTimeDiscription = document.createElement('p');
+            const EventTimeDiscriptionText = document.createTextNode("Time")
+            createPForEventTimeDiscription.appendChild(EventTimeDiscriptionText)
+            createDivForEventHourContainer.appendChild(createPForEventTimeDiscription)
+
+            // EventBoxRight contains openingNum,openingNumComment
+            const createDivForEventBoxRight = document.createElement('div');
+            createDivForEventBoxRight.setAttribute("id", "eventBox-right");
+            createDivForEventBox.appendChild(createDivForEventBoxRight)
+            // create p tag for availability Num
+            const createPForAvailabilityNum = document.createElement('p');
+            const AvailabilityNum = document.createTextNode(classCapacity)
+            createPForAvailabilityNum.appendChild(AvailabilityNum)
+            createDivForEventBoxRight.appendChild(createPForAvailabilityNum)
+            // create p tag for availability description
+            const createPForAvailabilityDiscription = document.createElement('p');
+            const AvailabilityDiscriptionText = document.createTextNode("opening")
+            createPForAvailabilityDiscription.appendChild(AvailabilityDiscriptionText)
+            createDivForEventBoxRight.appendChild(createPForAvailabilityDiscription)
+
+
+
+
+
+            createDivForEventBox.addEventListener('click', () => {
+                const selected = []
+                selected.push(createDivForEventBox)
+                createDivForEventBox.style.border = "5px solid red";
+
+                const createPForSelectedClass = document.createElement('p');
+                const SelectedClassTextContent = selected[0].textContent
+                const SelectedClassText = document.createTextNode(SelectedClassTextContent)
+                createPForSelectedClass.appendChild(SelectedClassText)
+                confirmSelectedClass.appendChild(createPForSelectedClass)
+
+                console.log(selected)
+                console.log(SelectedClassText)
+
+
+            })
+
+
         }
-        
+
+
+
 
     })
+
+//     let secectedArr = 
+// function SaveSelectDateInfo() {
+//     console.log(selected)
+// }
+
+
+
+// const Datastore = require('nedb');
+
+// let database = new Datastore('database.db');
+// database.loadDatabase();
+// database.insert(array)
