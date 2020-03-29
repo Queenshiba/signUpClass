@@ -10,6 +10,16 @@
 
 <body>
     <div class="container">
+        <div class="title-description">
+            <p>
+                Welcome to
+            </p>
+            <h1>Sing Up Class</h1>
+            <p>To sing up class, please fill in those blanks
+            </p>
+        </div>
+
+
         <div class="basicInfo">
             <h1>Infomation 1/2</h1>
             <div class="inputName-container">
@@ -27,43 +37,21 @@
             </div>
 
             <div class="basicInfo-btn">
-                <button onclick="SaveBasicInfo()" type="submit">Save</button>
+                <button onclick="SaveBasicInfo()" type="submit">Next</button>
             </div>
         </div>
 
-        <div class="selectEvent-contaier">
+        <div class="selectEvent-contaier" id="selectEvent-contaier">
             <h1>Infomation 2/2</h1>
             <div class="chooseEvent-container" id="chooseEvent-container">
-
-                <!-- <div id="eventBox">
-                    <div class="eventBox-left">
-                        <div class="className-container" id="className-container">
-                            <p id="eventName">Name</p>
-                        </div>
-                        <div class="eventDetail" id="eventDetail">
-                            <div class="eventDate-container" id="eventDate-container">
-                                <p id="eventDate">3/10</p>
-                                <p>Date</p>
-                            </div>
-                            <div class="eventHour-container" id="eventHour-container">
-                                <p id="eventHour">10:00</p>
-                                <p>Hour</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="eventBox-right" id="eventBox-right">
-                        <div class="openingNum">10</div>
-                        <div class="openingNumComment">Opening</div>
-                    </div>
-                </div> -->
-
-
+<!-- append class schedule -->
             </div>
-           
-            <input onclick="SaveSelectDateInfo()" type="submit" value="Save">
+
+            <button onclick="SaveSelectDateInfo()" type="submit">next</button>
+                
         </div>
 
-        <div class="confirmInfo">
+        <div class="confirmInfo" id="confirmInfo">
             <h1>Confirmation</h1>
             <p class="subTitles">Name</p>
             <div id="confirmName"></div>
@@ -79,7 +67,7 @@
 
 
 
-            <input type="submit" value="Save">
+            <input type="submit" value="Confirm">
         </div>
     </div>
 

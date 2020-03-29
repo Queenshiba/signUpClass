@@ -1,3 +1,7 @@
+
+
+
+
 const inputName = document.getElementById('inputName')
 const inputDob = document.getElementById('inputDob')
 const inputEmail = document.getElementById('inputEmail')
@@ -29,7 +33,17 @@ function SaveBasicInfo() {
     createPTagForEmail.appendChild(emailText)
     confirmEmail.appendChild(createPTagForEmail)
 
+    // jump to next section
+    document.location += "#selectEvent-contaier";
+    console.log('test')
 }
+
+
+function SaveSelectDateInfo() {
+    // jump to next section
+    document.location += "#confirmInfo";
+    console.log('hheee')
+    }
 
 
 fetch("./schedule.json")
@@ -55,11 +69,19 @@ fetch("./schedule.json")
             const chooseEventContainer = document.getElementById('chooseEvent-container');
             chooseEventContainer.appendChild(createDivForEventBox)
 
+            // function createEventElement ( tag, idName, parent ) {
+            //     const div = document.createElement('div');
+            //     div.setAttribute("id", idName);
+            //     parent.appendChild(createDivForEventBoxLeft)
+            // }
+            // createEventElement("div","eventBox-left", createDivForEventBox)
 
             // EventBoxLeft contains className-container,eventDetail
             const createDivForEventBoxLeft = document.createElement('div');
             createDivForEventBoxLeft.setAttribute("id", "eventBox-left");
             createDivForEventBox.appendChild(createDivForEventBoxLeft)
+
+
 
             // EventNameContainer contains eventName
             const createDivForEventNameContainer = document.createElement('div');
@@ -150,15 +172,12 @@ fetch("./schedule.json")
 
     })
 
-//     let secectedArr = 
-// function SaveSelectDateInfo() {
-//     console.log(selected)
-// }
+
 
 
 
 // const Datastore = require('nedb');
-
+// // let database = new Datastore({ filename: 'database.db', autoload: true });
 // let database = new Datastore('database.db');
 // database.loadDatabase();
-// database.insert(array)
+// database.insert({ name: "haq", name: 'he'})
