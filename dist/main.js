@@ -34,15 +34,19 @@ function SaveBasicInfo() {
     confirmEmail.appendChild(createPTagForEmail)
 
     // jump to next section
-    document.location += "#selectEvent-contaier";
-    console.log('test')
+    let selectEventContaier = document.getElementById('selectEvent-contaier')
+    selectEventContaier.scrollIntoView()
 }
+function startSignUp() {
+    let basicInfo = document.getElementById('basicInfo')
+    basicInfo.scrollIntoView()
 
+}
 
 function SaveSelectDateInfo() {
     // jump to next section
-    document.location += "#confirmInfo";
-    console.log('hheee')
+    let confirmInfo = document.getElementById('confirmInfo')
+    confirmInfo.scrollIntoView()
     }
 
 
@@ -68,6 +72,7 @@ fetch("./schedule.json")
             // append eventBox
             const chooseEventContainer = document.getElementById('chooseEvent-container');
             chooseEventContainer.appendChild(createDivForEventBox)
+
 
             // function createEventElement ( tag, idName, parent ) {
             //     const div = document.createElement('div');
@@ -146,7 +151,6 @@ fetch("./schedule.json")
 
 
 
-
             createDivForEventBox.addEventListener('click', () => {
                 const selected = []
                 selected.push(createDivForEventBox)
@@ -166,7 +170,12 @@ fetch("./schedule.json")
 
 
         }
-
+            // append a number for avaliable classed 
+            let openingClassNum = document.getElementById('openingClassNum')
+            const createPForOpeningClassNum = document.createElement('p');
+            const openingClassNumText = document.createTextNode(classSchedule.length)
+            createPForOpeningClassNum.appendChild(openingClassNumText)
+            openingClassNum.appendChild(createPForOpeningClassNum)
 
 
 

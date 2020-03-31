@@ -15,44 +15,44 @@
                 Welcome to
             </p>
             <h1>Sing Up Class</h1>
-            <p>To sing up class, please fill in those blanks
-            </p>
+            <button id="btn-startSignUp" onclick="startSignUp()">Start to sign up</button>
         </div>
 
 
-        <div class="basicInfo">
-            <h1>Infomation 1/2</h1>
-            <div class="inputName-container">
+        <div class="basicInfo" id="basicInfo">
+            <h2>Basic Infomation</h2>
+            <div class="basicInfoSections" id="inputName-container">
                 <p class="index">Name</p>
                 <input type="text" name="inputName" id="inputName" placeholder="type your name">
             </div>
-            <div class="dob-container">
+            <div class="basicInfoSections" id="dob-container">
                 <p class="index">DOB</p>
                 <input type="date" name="inputDob" id="inputDob">
             </div>
 
-            <div class="inputEmail-container">
+            <div class="basicInfoSections" id="inputEmail-container">
                 <p class="index">Email Adress</p>
                 <input type="email" name="inputEmail" id="inputEmail" placeholder="type your Email adress">
             </div>
 
-            <div class="basicInfo-btn">
-                <button onclick="SaveBasicInfo()" type="submit">Next</button>
-            </div>
+ 
+                <button id="basicInfo-btn" onclick="SaveBasicInfo()" type="submit">Next</button>
+
         </div>
 
         <div class="selectEvent-contaier" id="selectEvent-contaier">
-            <h1>Infomation 2/2</h1>
+            <h2>Class Schedule</h2>
+            <div class="announce">Currently <div id="openingClassNum"></div> classes are avaliable!</div>
             <div class="chooseEvent-container" id="chooseEvent-container">
-<!-- append class schedule -->
+                <!-- append class schedule -->
             </div>
 
             <button onclick="SaveSelectDateInfo()" type="submit">next</button>
-                
+
         </div>
 
         <div class="confirmInfo" id="confirmInfo">
-            <h1>Confirmation</h1>
+            <h2>Confirmation</h2>
             <p class="subTitles">Name</p>
             <div id="confirmName"></div>
 
@@ -65,9 +65,8 @@
             <p class="subTitles">Selected Class</p>
             <div id="confirmSelectedClass"></div>
 
+            <button id="confirm-btn" type="submit">Confirm</button>
 
-
-            <input type="submit" value="Confirm">
         </div>
     </div>
 

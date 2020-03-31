@@ -1,64 +1,131 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .title-description {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
 }
+
+/* basic info */
+
 .basicInfo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+    background: palevioletred;
+    height: 100vh;
+    width: 80%;
+}
+
+h2 {
+    padding-left: 10%;
+    padding-top: 10%;
+    font-size: 2em;
+}
+
+.basicInfoSections {
+    margin: 10% 0;
+}
+
+.index {
+    font-size: 1.3em;
+}
+
+.basicInfoSections input {
+    margin-left: 5%;
+    border: none;
+    padding: 10px 0;
+    width: 70%;
+}
+
+#basicInfo-btn {
+    width: 80px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 5%;
 }
 
 /* eventBox */
+
+.announce {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3em;
+    line-height: 60px;
+    padding-left: 5%;
+}
+
+#openingClassNum {
+    font-size: 1.5em;
+    padding: 0 5px;
+}
+
+.selectEvent-contaier {
+    height: auto;
+    background: peru;
+    width: 80%;
+}
+
 .chooseEvent-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 #eventBox {
-    background: yellow;
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    color: white;
+    border-radius: 10px;
     display: flex;
-    width: 80vw;
+    width: 70vw;
     height: 80px;
     justify-content: center;
-    margin: 1%;
-    
+    margin: 2%;
 }
 
 #eventDetail {
     display: flex;
     flex-direction: row;
 }
+
 #eventBox-right {
-    background: yellowgreen;
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 #eventBox-left {
     width: 70%;
     display: flex;
     flex-direction: column;
 }
+
 #className-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50%;
 }
+
 #eventDate-container {
-    background: pink;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -66,17 +133,24 @@
 }
 
 #eventHour-container {
-    background: orange;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* confirm infor */
+
 .confirmInfo {
-    height: 90vh;
+    height: 100vh;
+    background: palegreen;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
+    width: 80%;
+}
+
+#confirm-btn {
+    width: 100px;
 }
