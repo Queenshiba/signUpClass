@@ -1,3 +1,4 @@
+// import { createBrotliCompress } from "zlib"
 
 
 
@@ -62,7 +63,8 @@ fetch("./schedule.json")
             const className = classSchedule[i].className;
             const classDate = classSchedule[i].date;
             const classTime = classSchedule[i].time;
-            const classCapacity = classSchedule[i].capacity;
+            let classCapacity = classSchedule[i].capacity;
+
 
             // append schedule data to divs
             // eventBox contains eventBox-left,eventBox-right
@@ -72,7 +74,7 @@ fetch("./schedule.json")
             // append eventBox
             const chooseEventContainer = document.getElementById('chooseEvent-container');
             chooseEventContainer.appendChild(createDivForEventBox)
-
+            
 
             // function createEventElement ( tag, idName, parent ) {
             //     const div = document.createElement('div');
@@ -169,6 +171,21 @@ fetch("./schedule.json")
             })
 
 
+
+            if (classCapacity < 4) {
+                createDivForEventBox.classList.add("lessThanFive");
+            } else if (classCapacity >= 5 && classCapacity < 9) {
+                createDivForEventBox.classList.add("fiveToTen");
+            } else if (classCapacity >= 10 && classCapacity < 14) {
+                createDivForEventBox.classList.add("TenToFif");
+            } else if (classCapacity >= 15 && classCapacity < 20) {
+                createDivForEventBox.classList.add("fifToTwen");
+            } else if (classCapacity >= 20) {
+                createDivForEventBox.classList.add("moreThan20");
+            }
+
+
+
         }
             // append a number for avaliable classed 
             let openingClassNum = document.getElementById('openingClassNum')
@@ -177,6 +194,7 @@ fetch("./schedule.json")
             createPForOpeningClassNum.appendChild(openingClassNumText)
             openingClassNum.appendChild(createPForOpeningClassNum)
 
+        
 
 
     })

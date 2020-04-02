@@ -4,44 +4,44 @@
             "className": "React.js crash course",
             "date": "2020-04-01",
             "time": "14:00-15:00",
-            "capacity": 15
+            "capacity": 17
         },
 
         {
             "className": "Build your portfolio",
             "date": "2020-04-04",
             "time": "11:00-13:00",
-            "capacity": 5
+            "capacity": 23
         },
         {
             "className": "javaScript Algorithm",
             "date": "2020-04-06",
             "time": "10:00-11:00",
-            "capacity": 8
+            "capacity": 3
         },
         {
             "className": "python beginner",
             "date": "2020-04-09",
             "time": "15:00-19:00",
-            "capacity": 12
+            "capacity": 7
         },
         {
             "className": "vue.js crash course",
             "date": "2020-04-01",
             "time": "14:00-15:00",
-            "capacity": 15
+            "capacity": 12
         },
         {
             "className": "UI/UX design for developer",
             "date": "2020-04-03",
             "time": "10:00-11:00",
-            "capacity": 11
+            "capacity": 16
         },
         {
             "className": "Extreme HTML/CSS",
             "date": "2020-04-04",
             "time": "11:00-13:00",
-            "capacity": 5
+            "capacity": 30
         },
         {
             "className": "master database",

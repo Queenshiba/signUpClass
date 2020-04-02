@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
     <title>signUpClass</title>
 </head>
 
@@ -14,7 +15,7 @@
             <p>
                 Welcome to
             </p>
-            <h1>Sing Up Class</h1>
+            <h1>Sign Up Class</h1>
             <button id="btn-startSignUp" onclick="startSignUp()">Start to sign up</button>
         </div>
 
@@ -35,8 +36,8 @@
                 <input type="email" name="inputEmail" id="inputEmail" placeholder="type your Email adress">
             </div>
 
- 
-                <button id="basicInfo-btn" onclick="SaveBasicInfo()" type="submit">Next</button>
+
+            <button class="btn" id="basicInfo-btn" onclick="SaveBasicInfo()" type="submit">Next</button>
 
         </div>
 
@@ -47,25 +48,25 @@
                 <!-- append class schedule -->
             </div>
 
-            <button onclick="SaveSelectDateInfo()" type="submit">next</button>
+            <button class="btn" onclick="SaveSelectDateInfo()" type="submit">next</button>
 
         </div>
 
         <div class="confirmInfo" id="confirmInfo">
             <h2>Confirmation</h2>
             <p class="subTitles">Name</p>
-            <div id="confirmName"></div>
+            <div class="confirmContent" id="confirmName"></div>
 
             <p class="subTitles">BOD</p>
-            <div id="confirmDob"></div>
+            <div class="confirmContent" id="confirmDob"></div>
 
             <p class="subTitles">Email adress</p>
-            <div id="confirmEmail"></div>
+            <div class="confirmContent" id="confirmEmail"></div>
 
             <p class="subTitles">Selected Class</p>
-            <div id="confirmSelectedClass"></div>
+            <div class="confirmContent" id="confirmSelectedClass"></div>
 
-            <button id="confirm-btn" type="submit">Confirm</button>
+            <button class="btn" id="confirm-btn" type="submit">Confirm</button>
 
         </div>
     </div>

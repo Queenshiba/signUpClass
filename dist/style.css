@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
 .container {
@@ -17,6 +17,32 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+#btn-startSignUp {
+    background: #f2709c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9472, #f2709c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-radius: 25px;
+    width: 170px;
+    height: 50px;
+    color: white;
+    font-size: 1.1em;
+}
+
+#btn-startSignUp:hover {
+    background: #f2709bc4;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 5%;
 }
 
 /* basic info */
@@ -74,7 +100,6 @@ h2 {
 
 .selectEvent-contaier {
     height: auto;
-    background: peru;
     width: 80%;
 }
 
@@ -86,17 +111,59 @@ h2 {
 }
 
 #eventBox {
-    background: #A770EF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    font-size: 0.8em;
     color: white;
     border-radius: 10px;
     display: flex;
-    width: 70vw;
+    width: 340px;
     height: 80px;
     justify-content: center;
     margin: 2%;
+}
+
+.lessThanFive {
+    background: #0cebeb;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fiveToTen {
+    background: #F2994A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.TenToFif {
+    background: #00d2ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fifToTwen {
+    background: #DD5E89;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F7BB97, #DD5E89);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.moreThan20 {
+    background: #FBD3E9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #eventDetail {
@@ -153,4 +220,11 @@ h2 {
 
 #confirm-btn {
     width: 100px;
+}
+.subTitles {
+    padding-left: 5%;
+    line-height: 50px;
+}
+.confirmContent {
+    padding-left: 5%;
 }
