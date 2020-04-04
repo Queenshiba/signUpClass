@@ -48,7 +48,7 @@ function SaveSelectDateInfo() {
     // jump to next section
     let confirmInfo = document.getElementById('confirmInfo')
     confirmInfo.scrollIntoView()
-    }
+}
 
 
 fetch("./schedule.json")
@@ -74,7 +74,7 @@ fetch("./schedule.json")
             // append eventBox
             const chooseEventContainer = document.getElementById('chooseEvent-container');
             chooseEventContainer.appendChild(createDivForEventBox)
-            
+
 
             // function createEventElement ( tag, idName, parent ) {
             //     const div = document.createElement('div');
@@ -90,15 +90,26 @@ fetch("./schedule.json")
 
 
 
+
             // EventNameContainer contains eventName
             const createDivForEventNameContainer = document.createElement('div');
             createDivForEventNameContainer.setAttribute("id", "className-container");
             createDivForEventBoxLeft.appendChild(createDivForEventNameContainer)
+
+            // create check box
+            const createDivForCheckeBox = document.createElement('div');
+            createDivForCheckeBox.setAttribute("id", "checkeBox");
+            createDivForEventNameContainer.appendChild(createDivForCheckeBox)
+
             // create p tag for EventName
             const createPForEventName = document.createElement('p');
             const EventNameText = document.createTextNode(className)
             createPForEventName.appendChild(EventNameText)
             createDivForEventNameContainer.appendChild(createPForEventName)
+
+
+
+
 
             // EventDetail contains eventDate-container, eventHour-containe
             const createDivForEventDetail = document.createElement('div');
@@ -157,6 +168,8 @@ fetch("./schedule.json")
                 const selected = []
                 selected.push(createDivForEventBox)
                 createDivForEventBox.style.border = "5px solid red";
+                let checkBtn = document.createElement('button')
+                createDivForCheckeBox.appendChild(checkBtn)
 
                 const createPForSelectedClass = document.createElement('p');
                 const SelectedClassTextContent = selected[0].textContent
@@ -187,14 +200,14 @@ fetch("./schedule.json")
 
 
         }
-            // append a number for avaliable classed 
-            let openingClassNum = document.getElementById('openingClassNum')
-            const createPForOpeningClassNum = document.createElement('p');
-            const openingClassNumText = document.createTextNode(classSchedule.length)
-            createPForOpeningClassNum.appendChild(openingClassNumText)
-            openingClassNum.appendChild(createPForOpeningClassNum)
+        // append a number for avaliable classed 
+        let openingClassNum = document.getElementById('openingClassNum')
+        const createPForOpeningClassNum = document.createElement('p');
+        const openingClassNumText = document.createTextNode(classSchedule.length)
+        createPForOpeningClassNum.appendChild(openingClassNumText)
+        openingClassNum.appendChild(createPForOpeningClassNum)
 
-        
+
 
 
     })

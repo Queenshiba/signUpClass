@@ -94,7 +94,7 @@ h2 {
 }
 
 #openingClassNum {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0 5px;
 }
 
@@ -118,7 +118,7 @@ h2 {
     width: 340px;
     height: 80px;
     justify-content: center;
-    margin: 2%;
+    margin: 1%;
 }
 
 .lessThanFive {
@@ -166,6 +166,8 @@ h2 {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+
+
 #eventDetail {
     display: flex;
     flex-direction: row;
@@ -191,12 +193,23 @@ h2 {
     align-items: center;
     height: 50%;
 }
+#className-container p {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#checkeBox {
+    background: black;
+    width: 20px;
+    height: 50%;
+    margin-left: 10px;
+}
 #eventDate-container {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #eventHour-container {

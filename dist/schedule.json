@@ -20,12 +20,6 @@
             "capacity": 3
         },
         {
-            "className": "python beginner",
-            "date": "2020-04-09",
-            "time": "15:00-19:00",
-            "capacity": 7
-        },
-        {
             "className": "vue.js crash course",
             "date": "2020-04-01",
             "time": "14:00-15:00",
