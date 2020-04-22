@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="topPage">
         <div class="title-description">
             <p>
                 Welcome to
@@ -22,6 +22,12 @@
 
         <div class="basicInfo" id="basicInfo">
             <h2>Basic Infomation</h2>
+<div class="index-lineBox">
+    <div class="index-line" id="index-line-color"></div>
+    <div class="index-line" id="index-line-gray"></div>
+    <div class="index-line" id="index-line-gray"></div>
+</div>
+
             <div class="basicInfoSections" id="inputName-container">
                 <p class="index">Name</p>
                 <input type="text" name="inputName" id="inputName" placeholder="type your name">
@@ -43,6 +49,11 @@
 
         <div class="selectEvent-contaier" id="selectEvent-contaier">
             <h2>Class Schedule</h2>
+            <div class="index-lineBox">
+                <div class="index-line" id="index-line-gray"></div>
+                <div class="index-line" id="index-line-color"></div>
+                <div class="index-line" id="index-line-gray"></div>
+            </div>
             <div class="announce">Currently <div id="openingClassNum"></div> classes are avaliable!</div>
             <div class="chooseEvent-container" id="chooseEvent-container">
                 <!-- append class schedule -->
@@ -54,10 +65,15 @@
 
         <div class="confirmInfo" id="confirmInfo">
             <h2>Confirmation</h2>
+            <div class="index-lineBox">
+                <div class="index-line" id="index-line-gray"></div>
+                <div class="index-line" id="index-line-gray"></div>
+                <div class="index-line" id="index-line-color"></div>
+            </div>
             <p class="subTitles">Name</p>
             <div class="confirmContent" id="confirmName"></div>
 
-            <p class="subTitles">BOD</p>
+            <p class="subTitles">DOB</p>
             <div class="confirmContent" id="confirmDob"></div>
 
             <p class="subTitles">Email adress</p>
@@ -66,7 +82,26 @@
             <p class="subTitles">Selected Class</p>
             <div class="confirmContent" id="confirmSelectedClass"></div>
 
-            <button class="btn" id="confirm-btn" type="submit">Confirm</button>
+            <button class="btn" onclick="confirmInfoBtn()" type="submit">Confirm</button>
+
+        </div>
+
+        <div class="completedScreen" id="completedScreen">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="messeage">
+                <h1>You succeeded signing class!</h1>
+                <h1>Look forward to it!</h1>
+                <button id="btn-completedScreen" onclick="goToTopPage()">Go to top</button>
+            </div>
 
         </div>
     </div>

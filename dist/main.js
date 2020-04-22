@@ -38,6 +38,7 @@ function SaveBasicInfo() {
     let selectEventContaier = document.getElementById('selectEvent-contaier')
     selectEventContaier.scrollIntoView()
 }
+
 function startSignUp() {
     let basicInfo = document.getElementById('basicInfo')
     basicInfo.scrollIntoView()
@@ -50,6 +51,17 @@ function SaveSelectDateInfo() {
     confirmInfo.scrollIntoView()
 }
 
+function confirmInfoBtn() {
+    // jump to next section
+    let completedScreen = document.getElementById('completedScreen')
+    completedScreen.scrollIntoView()
+}
+
+function goToTopPage(){
+    window.location.reload();
+    let topPage = document.getElementById('topPage')
+    topPage.scrollIntoView()
+}
 
 fetch("./schedule.json")
     .then(function (resp) {
@@ -83,12 +95,12 @@ fetch("./schedule.json")
             // }
             // createEventElement("div","eventBox-left", createDivForEventBox)
 
+
+
             // EventBoxLeft contains className-container,eventDetail
             const createDivForEventBoxLeft = document.createElement('div');
             createDivForEventBoxLeft.setAttribute("id", "eventBox-left");
             createDivForEventBox.appendChild(createDivForEventBoxLeft)
-
-
 
 
             // EventNameContainer contains eventName
@@ -96,17 +108,25 @@ fetch("./schedule.json")
             createDivForEventNameContainer.setAttribute("id", "className-container");
             createDivForEventBoxLeft.appendChild(createDivForEventNameContainer)
 
-            // create check box
+            // create div for checkbox
             const createDivForCheckeBox = document.createElement('div');
-            createDivForCheckeBox.setAttribute("id", "checkeBox");
-            createDivForEventNameContainer.appendChild(createDivForCheckeBox)
+            createDivForCheckeBox.setAttribute("id", "checkeBox-container");
+            createDivForEventBox.insertBefore(createDivForCheckeBox, createDivForEventBoxLeft)
 
+            // create check box
+            const createCheckBox = document.createElement('input');
+            createCheckBox.setAttribute("id", "checkeBox");
+            createCheckBox.setAttribute("type", "checkbox");
+            createDivForCheckeBox.appendChild(createCheckBox)
+
+            
+            
             // create p tag for EventName
             const createPForEventName = document.createElement('p');
             const EventNameText = document.createTextNode(className)
             createPForEventName.appendChild(EventNameText)
             createDivForEventNameContainer.appendChild(createPForEventName)
-
+            createPForEventName.classList.add("eventNameP");
 
 
 
@@ -167,7 +187,7 @@ fetch("./schedule.json")
             createDivForEventBox.addEventListener('click', () => {
                 const selected = []
                 selected.push(createDivForEventBox)
-                createDivForEventBox.style.border = "5px solid red";
+                // createDivForEventBox.style.border = "5px solid red";
                 let checkBtn = document.createElement('button')
                 createDivForCheckeBox.appendChild(checkBtn)
 
