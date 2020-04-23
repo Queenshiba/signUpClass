@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+    <title>signUpClass</title>
+</head>
+
+<body>
+    <div class="container" id="topPage">
+        <div class="title-description">
+            <p>
+                Welcome to
+            </p>
+            <h1>Sign Up Class</h1>
+            <button id="btn-startSignUp" onclick="startSignUp()">Start to sign up</button>
+        </div>
+
+
+        <div class="basicInfo" id="basicInfo">
+            <h2>Basic Infomation</h2>
+<div class="index-lineBox">
+    <div class="index-line" id="index-line-color"></div>
+    <div class="index-line" id="index-line-gray"></div>
+    <div class="index-line" id="index-line-gray"></div>
+</div>
+
+            <div class="basicInfoSections" id="inputName-container">
+                <p class="index">Name</p>
+                <input type="text" name="inputName" id="inputName" placeholder="type your name">
+            </div>
+            <div class="basicInfoSections" id="dob-container">
+                <p class="index">DOB</p>
+                <input type="date" name="inputDob" id="inputDob">
+            </div>
+
+            <div class="basicInfoSections" id="inputEmail-container">
+                <p class="index">Email Adress</p>
+                <input type="email" name="inputEmail" id="inputEmail" placeholder="type your Email adress">
+            </div>
+
+
+            <button class="btn" id="basicInfo-btn" onclick="SaveBasicInfo()" type="submit">Next</button>
+
+        </div>
+
+        <div class="selectEvent-contaier" id="selectEvent-contaier">
+            <h2>Class Schedule</h2>
+            <div class="index-lineBox">
+                <div class="index-line" id="index-line-gray"></div>
+                <div class="index-line" id="index-line-color"></div>
+                <div class="index-line" id="index-line-gray"></div>
+            </div>
+            <div class="announce">Currently <div id="openingClassNum"></div> classes are avaliable!</div>
+            <div class="chooseEvent-container" id="chooseEvent-container">
+                <!-- append class schedule -->
+            </div>
+
+            <button id="btn-selectedClass" class="btn" onclick="SaveSelectDateInfo()" type="submit">Next</button>
+
+        </div>
+
+        <div class="confirmInfo" id="confirmInfo">
+            <h2>Confirmation</h2>
+            <div class="index-lineBox">
+                <div class="index-line" id="index-line-gray"></div>
+                <div class="index-line" id="index-line-gray"></div>
+                <div class="index-line" id="index-line-color"></div>
+            </div>
+            <p class="subTitles">Name</p>
+            <div class="confirmContent" id="confirmName"></div>
+
+            <p class="subTitles">DOB</p>
+            <div class="confirmContent" id="confirmDob"></div>
+
+            <p class="subTitles">Email adress</p>
+            <div class="confirmContent" id="confirmEmail"></div>
+
+            <p class="subTitles">Selected Class</p>
+            <div class="confirmContent" id="confirmSelectedClass"></div>
+
+            <button class="btn" onclick="confirmInfoBtn()" type="submit">Confirm</button>
+
+        </div>
+
+        <div class="completedScreen" id="completedScreen">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="messeage">
+                <h1>You succeeded signing class!</h1>
+                <h1>Look forward to it!</h1>
+                <button id="btn-completedScreen" onclick="goToTopPage()">Go to top</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>
