@@ -68,11 +68,11 @@
 
 }
 #index-line-color {
-    background: #f2709c;
+    background: #396afc;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ff9472, #f2709c);
+    background: linear-gradient(to right, #2948ff, #396afc);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -89,7 +89,7 @@
 
 h2 {
     padding-left: 10%;
-    padding-top: 10%;
+    padding-top: 5%;
     font-size: 2em;
 }
 
@@ -140,62 +140,29 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 #eventBox {
     font-size: 0.9em;
+    /* box-shadow: 8px 29px 80px -23px rgba(0,0,0,0.75);; */
+    background: #f2709c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9472, #f2709c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     border-radius: 10px;
     display: flex;
     width: 370px;
-    height: 90px;
+    height: 80px;
     justify-content: center;
     margin: 1%;
 }
-
-.lessThanFive {
-    background: #0cebeb;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.fiveToTen {
-    background: #F2994A;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F2C94C, #F2994A);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.TenToFif {
-    background: #00d2ff;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3a7bd5, #00d2ff);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.fifToTwen {
-    background: #DD5E89;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F7BB97, #DD5E89);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.moreThan20 {
-    background: #FBD3E9;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #BB377D, rgb(250, 190, 223));
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #BB377D, rgb(252, 122, 193));
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#btn-selectedClass {
+    /* background-color: yellowgreen; */
+    margin-left: 80%;
 }
 
 #eventDetail {
@@ -285,14 +252,20 @@ h2 {
 #confirm-btn {
     width: 100px;
 }
-
+#confirmSelectedClassDiv {
+    background: yellowgreen;
+    border-radius: 10px;
+    margin: 5% 0;
+    padding-left: 5%;
+}
 .subTitles {
     padding-left: 5%;
     line-height: 50px;
+    font-weight: bold;
 }
 
 .confirmContent {
-    padding-left: 5%;
+    padding-left: 10%;
 }
 
 /* completedScreen */

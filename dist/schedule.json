@@ -30,12 +30,6 @@
             "date": "2020-04-04",
             "time": "11:00-13:00",
             "capacity": 30
-        },
-        {
-            "className": "master database",
-            "date": "2020-04-06",
-            "time": "07:00-19:00",
-            "capacity": 3
         }
     ]
 }

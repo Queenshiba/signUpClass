@@ -57,7 +57,7 @@ function confirmInfoBtn() {
     completedScreen.scrollIntoView()
 }
 
-function goToTopPage(){
+function goToTopPage() {
     window.location.reload();
     let topPage = document.getElementById('topPage')
     topPage.scrollIntoView()
@@ -119,8 +119,8 @@ fetch("./schedule.json")
             createCheckBox.setAttribute("type", "checkbox");
             createDivForCheckeBox.appendChild(createCheckBox)
 
-            
-            
+
+
             // create p tag for EventName
             const createPForEventName = document.createElement('p');
             const EventNameText = document.createTextNode(className)
@@ -186,36 +186,58 @@ fetch("./schedule.json")
 
             createDivForEventBox.addEventListener('click', () => {
                 const selected = []
-                selected.push(createDivForEventBox)
-                // createDivForEventBox.style.border = "5px solid red";
+                selected.push(className, classDate, classTime)
+               
                 let checkBtn = document.createElement('button')
                 createDivForCheckeBox.appendChild(checkBtn)
 
-                const createPForSelectedClass = document.createElement('p');
-                const SelectedClassTextContent = selected[0].textContent
-                const SelectedClassText = document.createTextNode(SelectedClassTextContent)
-                createPForSelectedClass.appendChild(SelectedClassText)
-                confirmSelectedClass.appendChild(createPForSelectedClass)
+                let confirmSelectedClassDiv = document.getElementById('confirmSelectedClass')
+                const createDivForSelectedClassInConfirm = document.createElement('div');
+                const createPForSelectedClassInConfirm = document.createElement('p');
 
+                // In confirmation create p tag for Class Name
+                const SelectedClassTextContentClassName = selected[0].toString()
+                const SelectedClassTextClassName = document.createTextNode(SelectedClassTextContentClassName)
+                createDivForSelectedClassInConfirm.appendChild(SelectedClassTextClassName)
+
+                // In confirmation create p tag for Class Date
+                const createPForEventDateInConfirm = document.createElement('p')
+                const SelectedClassTextContentClassDate = selected[1].toString()
+                const SelectedClassTextClassDate = document.createTextNode(SelectedClassTextContentClassDate)
+                createPForEventDateInConfirm.appendChild(SelectedClassTextClassDate)
+                createDivForSelectedClassInConfirm.appendChild(createPForEventDateInConfirm)
+
+                // In confirmation create p tag for Class Hour
+                const createPForEventHourInConfirm = document.createElement('p');
+                const SelectedClassTextContentClassTime = selected[2].toString()
+                const SelectedClassTextClassTime = document.createTextNode(SelectedClassTextContentClassTime)
+                createPForEventHourInConfirm.appendChild(SelectedClassTextClassTime)
+                createDivForSelectedClassInConfirm.appendChild(createPForEventHourInConfirm)
+
+
+                createDivForSelectedClassInConfirm.appendChild(createPForSelectedClassInConfirm)
+                confirmSelectedClassDiv.appendChild(createDivForSelectedClassInConfirm)
+                createDivForSelectedClassInConfirm.setAttribute("id", "confirmSelectedClassDiv");
+
+                console.log(selected.toString())
                 console.log(selected)
-                console.log(SelectedClassText)
 
 
             })
 
 
 
-            if (classCapacity < 4) {
-                createDivForEventBox.classList.add("lessThanFive");
-            } else if (classCapacity >= 5 && classCapacity < 9) {
-                createDivForEventBox.classList.add("fiveToTen");
-            } else if (classCapacity >= 10 && classCapacity < 14) {
-                createDivForEventBox.classList.add("TenToFif");
-            } else if (classCapacity >= 15 && classCapacity < 20) {
-                createDivForEventBox.classList.add("fifToTwen");
-            } else if (classCapacity >= 20) {
-                createDivForEventBox.classList.add("moreThan20");
-            }
+            // if (classCapacity < 4) {
+            //     createDivForEventBox.classList.add("lessThanFive");
+            // } else if (classCapacity >= 5 && classCapacity < 9) {
+            //     createDivForEventBox.classList.add("fiveToTen");
+            // } else if (classCapacity >= 10 && classCapacity < 14) {
+            //     createDivForEventBox.classList.add("TenToFif");
+            // } else if (classCapacity >= 15 && classCapacity < 20) {
+            //     createDivForEventBox.classList.add("fifToTwen");
+            // } else if (classCapacity >= 20) {
+            //     createDivForEventBox.classList.add("moreThan20");
+            // }
 
 
 
