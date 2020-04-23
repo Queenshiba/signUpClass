@@ -1,0 +1,24 @@
+{
+  "name": "sign-up-class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Queenshiba/signUpClass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Queenshiba/signUpClass/issues"
+  },
+  "homepage": "https://github.com/Queenshiba/signUpClass#readme"
+}
