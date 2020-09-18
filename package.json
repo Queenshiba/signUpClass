@@ -1,7 +1,6 @@
 {
   "name": "sign-up-class",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "gh-pages": "^2.2.0",
@@ -21,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/Queenshiba/signUpClass/issues"
   },
-  "homepage": "https://github.com/Queenshiba/signUpClass#readme"
+  "homepage": "https://github.com/Queenshiba/signUpClass#readme",
+  "description": ""
 }

@@ -98,7 +98,7 @@ h2 {
 }
 
 .index {
-    font-size: 1.3em;
+    font-size: 2em;
 }
 
 .basicInfoSections input {
@@ -253,7 +253,8 @@ h2 {
     width: 100px;
 }
 #confirmSelectedClassDiv {
-    background: yellowgreen;
+    color: white;
+    background: blue;
     border-radius: 10px;
     margin: 5% 0;
     padding-left: 5%;
